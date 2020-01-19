@@ -45,7 +45,7 @@ file(GLOB_RECURSE ALL_SRCS "*.cc" "*.h")
 set(CMAKE_AUTOMOC ON)
 add_library(${PROJECT_NAME} ${ALL_SRCS})
 target_link_libraries(${PROJECT_NAME} PUBLIC ${QT_LIBRARIES})
-
+set(Qt5_DIR /opt/Qt5.5.1/5.5/gcc_64/lib/cmake/Qt5)
 if(rviz_QT_VERSION VERSION_LESS "5")
   message(STATUS "Using Qt4 based on the rviz_QT_VERSION: ${rviz_QT_VERSION}")
   find_package(Qt4 ${rviz_QT_VERSION} EXACT REQUIRED QtCore QtGui)
